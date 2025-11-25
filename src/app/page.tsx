@@ -91,10 +91,16 @@ export default function Home() {
               <button
                 type="button"
                 onClick={openLuna}
-                className="group inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition hover:border-cyan-300/70 hover:bg-cyan-500/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/60"
+                className="group inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-cyan-300 via-white to-emerald-300 px-8 py-4 text-lg font-semibold text-black shadow-[0_15px_45px_rgba(15,129,144,0.35)] transition hover:scale-105 hover:shadow-[0_20px_60px_rgba(15,129,144,0.45)] focus:outline-none focus-visible:ring-4 focus-visible:ring-cyan-200"
               >
-                <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 group-hover:bg-white transition" />
+                <span className="inline-flex h-3 w-3 rounded-full bg-emerald-600 transition group-hover:bg-black" />
                 Ask Luna
+                <span
+                  aria-hidden="true"
+                  className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-black/10 text-base transition group-hover:bg-black/20"
+                >
+                  ↗
+                </span>
               </button>
               <div className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-3 text-sm text-white/70">
                 <span className="h-2 w-2 rounded-full bg-cyan-300 animate-pulse" />
@@ -190,7 +196,7 @@ export default function Home() {
             <button
               type="button"
               onClick={openLuna}
-              className="mt-8 inline-flex items-center gap-3 rounded-full bg-white text-black px-5 py-3 text-sm font-semibold transition hover:bg-cyan-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+              className="mt-8 inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-white via-cyan-200 to-white px-7 py-4 text-base font-semibold text-black shadow-[0_10px_30px_rgba(255,255,255,0.25)] transition hover:scale-105 focus:outline-none focus-visible:ring-4 focus-visible:ring-white/80"
             >
               Ask Luna now
               <span aria-hidden="true">→</span>
@@ -231,7 +237,7 @@ export default function Home() {
             <button
               type="button"
               onClick={openLuna}
-              className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white px-8 py-3 text-base font-semibold text-black transition hover:bg-cyan-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+              className="inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-cyan-400 via-emerald-200 to-white px-9 py-4 text-lg font-semibold text-black shadow-[0_15px_40px_rgba(28,200,180,0.45)] transition hover:scale-105 hover:shadow-[0_20px_50px_rgba(28,200,180,0.6)] focus:outline-none focus-visible:ring-4 focus-visible:ring-cyan-100"
             >
               Ask Luna
               <span aria-hidden="true">↗</span>
