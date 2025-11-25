@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "highlights": ["1-week install", "Lead capture ready", "Privacy-first"],
+    "title": "See how Ask Luna converts curious visitors into qualified projects.",
+    "description": "This interactive demo is exactly what Lunim deploys for clients who want an AI concierge on their site. Let prospects talk through scope, surface plans automatically, and hand off warm, structured briefs to your team.",
+    "primaryCtaLabel": "Ask Luna",
+    "statusBadge": "Demo environment • optimized for desktop"
+  },
+  "preview": {
+    "labels": ["Demo feed", "Production stack"],
+    "quote": "Hi! I'm Luna, Lunim's AI guide. I capture goals, budgets, and timing so your team can start every engagement already in sync.",
+    "supportingText": "Give prospects a guided experience that feels bespoke while your team focuses on the deep work."
+  },
+  "stats": [
+    { "label": "Replies in seconds", "value": "≈3 seconds" },
+    { "label": "Secure by Design", "value": "On the Record or Confidential" },
+    { "label": "Handoff data captured", "value": "Goals, scope, readiness, intent" }
+  ],
+  "whySection": {
+    "eyebrow": "Why forward-looking teams add Luna",
+    "heading": "Everything you need to nurture interest before sales hops on a call",
+    "body": "Instead of gating value behind a form, let Luna qualify, educate, and package prospects into actionable briefs. Your team receives rich context and a prioritized plan, while the visitor feels seen and supported.",
+    "features": [
+      {
+        "tag": "White-label ready",
+        "title": "Brand-native experiences",
+        "description": "Tailor Luna's visuals, tone, and call-to-action so it mirrors your studio's brand while keeping the proven flow intact."
+      },
+      {
+        "tag": "Revenue ops",
+        "title": "Structured lead capture",
+        "description": "Every conversation produces a summary, urgency score, and next steps that pipe straight into your CRM or workflows."
+      },
+      {
+        "tag": "Trust",
+        "title": "Privacy modes built in",
+        "description": "Give visitors the choice between on-the-record and confidential sessions while still capturing the signal your team needs."
+      }
+    ]
+  },
+  "flowSection": {
+    "eyebrow": "Pilot flow",
+    "heading": "From hello to handoff in four simple beats.",
+    "body": "Launch the widget on your marketing site, drive traffic to this experience, and let Luna gather everything your strategists normally ask in a kickoff.",
+    "ctaLabel": "Ask Luna now",
+    "steps": [
+      {
+        "title": "Share where you are",
+        "detail": "Prospects explain goals, channels, budgets, and timing in plain language."
+      },
+      {
+        "title": "Luna clarifies automatically",
+        "detail": "The assistant asks targeted follow-ups so you capture success metrics and blockers without a human in the loop."
+      },
+      {
+        "title": "Review the instant plan",
+        "detail": "Visitors receive a prioritized roadmap, making them more confident before they ever speak to sales."
+      },
+      {
+        "title": "Take action",
+        "detail": "They can download a branded PDF, book time with your team, or keep iterating with Luna."
+      }
+    ]
+  },
+  "closingSection": {
+    "eyebrow": "Bring Luna to your funnel",
+    "heading": "Give prospects a smarter first touch—and give your team better briefs.",
+    "body": "When you're ready, Lunim handles the technical lift, customizes the prompts, and connects the data to your systems. You walk away with an AI copilot that sells the way you do.",
+    "ctaLabel": "Experience Luna yourself",
+    "badge": "Ask Luna, powered by Lunim"
+  }
+}
