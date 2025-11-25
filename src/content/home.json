@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "highlights": ["Voice + text", "PDF handoff", "Studio-grade insights"],
+    "title": "Ask Luna. Discover the smartest next step for your build.",
+    "description": "Luna is Lunim Studio's AI guide. Share your goals, talk through constraints, and within minutes you'll get a human-ready plan—voice, text, PDF, and a warm invitation to the team when you're ready.",
+    "primaryCtaLabel": "Ask Luna",
+    "statusBadge": "Live • typically replies in seconds"
+  },
+  "preview": {
+    "labels": ["Live preview", "Secure"],
+    "quote": "Hi! I'm Luna, your guide at Lunim Studio. Tell me about your project and I'll help you find the perfect next steps.",
+    "supportingText": "Voice-first, privacy-aware, and always ready to hand off to the Lunim team."
+  },
+  "stats": [
+    { "label": "Avg. time to clarity", "value": "≈2½ minutes" },
+    { "label": "Plans shaped this week", "value": "128 projects" },
+    { "label": "Privacy modes", "value": "On-the-record or confidential" }
+  ],
+  "whySection": {
+    "eyebrow": "Why teams ask Luna",
+    "heading": "Every conversation ends with a confident plan",
+    "body": "Instead of waiting for a scoping call, Luna helps product and marketing leads reach clarity faster. Switch between voice and text at any point, save your plan, or keep it totally confidential.",
+    "features": [
+      {
+        "tag": "Conversational AI",
+        "title": "Voice-first guidance",
+        "description": "Speak freely and Luna will listen, clarify, and respond with natural voice or text—whichever feels right for you."
+      },
+      {
+        "tag": "Strategy",
+        "title": "Personalized plans",
+        "description": "In a few minutes, Luna synthesizes your goals into a sequence of concrete next steps the Lunim team can act on immediately."
+      },
+      {
+        "tag": "Trust",
+        "title": "Built-in privacy",
+        "description": "Choose an on-the-record session or switch to confidential mode so nothing is saved—perfect for early, sensitive projects."
+      }
+    ]
+  },
+  "flowSection": {
+    "eyebrow": "Flow",
+    "heading": "Start the conversation whenever inspiration hits.",
+    "body": "Luna keeps track of every message, surfaces clarifying questions, and nudges you to a human teammate when a deeper dive makes sense.",
+    "ctaLabel": "Ask Luna now",
+    "steps": [
+      {
+        "title": "Share where you are",
+        "detail": "Describe your idea, product state, or challenge in your own words."
+      },
+      {
+        "title": "Luna clarifies",
+        "detail": "Expect two thoughtful follow-up questions so we can scope work precisely."
+      },
+      {
+        "title": "Review the plan",
+        "detail": "Luna presents a prioritized, multi-step plan plus a nudge toward a Lunim consult."
+      },
+      {
+        "title": "Take action",
+        "detail": "Download the branded PDF, replay the summary, or open a call with the team."
+      }
+    ]
+  },
+  "closingSection": {
+    "eyebrow": "Ready when you are",
+    "heading": "Spin up your plan with a single tap",
+    "body": "Whether you're refining an existing roadmap or exploring a fresh build, Luna captures your thinking, recommends next actions, and preps everything for a seamless handoff to Lunim.",
+    "ctaLabel": "Ask Luna",
+    "badge": "No waitlist • instantly available"
+  }
+}
