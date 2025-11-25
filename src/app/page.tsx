@@ -1,62 +1,15 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { LunaPortal } from "@/components/Luna";
 import lunaPortrait from "@/assets/luna.png";
-
-const stats = [
-  { label: "Avg. time to clarity", value: "≈2½ minutes" },
-  { label: "Plans shaped this week", value: "128 projects" },
-  { label: "Privacy modes", value: "On-the-record or confidential" },
-];
-
-const features = [
-  {
-    title: "Voice-first guidance",
-    description:
-      "Speak freely and Luna will listen, clarify, and respond with natural voice or text—whichever feels right for you.",
-    tag: "Conversational AI",
-  },
-  {
-    title: "Personalized plans",
-    description:
-      "In a few minutes, Luna synthesizes your goals into a sequence of concrete next steps the Lunim team can act on immediately.",
-    tag: "Strategy",
-  },
-  {
-    title: "Built-in privacy",
-    description:
-      "Choose an on-the-record session or switch to confidential mode so nothing is saved—perfect for early, sensitive projects.",
-    tag: "Trust",
-  },
-];
-
-const flow = [
-  {
-    title: "Share where you are",
-    detail: "Describe your idea, product state, or challenge in your own words.",
-  },
-  {
-    title: "Luna clarifies",
-    detail: "Expect two thoughtful follow-up questions so we can scope work precisely.",
-  },
-  {
-    title: "Review the plan",
-    detail: "Luna presents a prioritized, multi-step plan plus a nudge toward a Lunim consult.",
-  },
-  {
-    title: "Take action",
-    detail: "Download the branded PDF, replay the summary, or open a call with the team.",
-  },
-];
+import homeContent from "@/content/home.json";
 
 export default function Home() {
   const [isPortalOpen, setIsPortalOpen] = useState(false);
-  const heroHighlights = useMemo(
-    () => ["Voice + text", "PDF handoff", "Studio-grade insights"],
-    []
-  );
+  const { hero, preview, stats, whySection, flowSection, closingSection } =
+    homeContent;
 
   const openLuna = () => setIsPortalOpen(true);
 
@@ -70,7 +23,7 @@ export default function Home() {
         <header className="mx-auto grid w-full max-w-6xl gap-16 lg:grid-cols-[minmax(0,_1fr)_360px] xl:grid-cols-[minmax(0,_1fr)_420px]">
           <div>
             <div className="flex flex-wrap items-center gap-3 text-sm text-cyan-200/90">
-              {heroHighlights.map((item) => (
+              {hero.highlights.map((item) => (
                 <span
                   key={item}
                   className="rounded-full border border-white/15 px-3 py-1 uppercase tracking-[0.2em] text-[0.65rem] text-white/70"
@@ -80,12 +33,10 @@ export default function Home() {
               ))}
             </div>
             <h1 className="mt-8 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Ask Luna. Discover the smartest next step for your build.
+              {hero.title}
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-white/70 sm:text-xl">
-              Luna is Lunim Studio&apos;s AI guide. Share your goals, talk through
-              constraints, and within minutes you&apos;ll get a human-ready plan—voice,
-              text, PDF, and a warm invitation to the team when you&apos;re ready.
+              {hero.description}
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <button
@@ -94,7 +45,7 @@ export default function Home() {
                 className="group inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-cyan-300 via-white to-emerald-300 px-8 py-4 text-lg font-semibold text-black shadow-[0_15px_45px_rgba(15,129,144,0.35)] transition hover:scale-105 hover:shadow-[0_20px_60px_rgba(15,129,144,0.45)] focus:outline-none focus-visible:ring-4 focus-visible:ring-cyan-200"
               >
                 <span className="inline-flex h-3 w-3 rounded-full bg-emerald-600 transition group-hover:bg-black" />
-                Ask Luna
+                {hero.primaryCtaLabel}
                 <span
                   aria-hidden="true"
                   className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-black/10 text-base transition group-hover:bg-black/20"
@@ -104,7 +55,7 @@ export default function Home() {
               </button>
               <div className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-3 text-sm text-white/70">
                 <span className="h-2 w-2 rounded-full bg-cyan-300 animate-pulse" />
-                Live • typically replies in seconds
+                {hero.statusBadge}
               </div>
             </div>
             <div className="mt-12 grid gap-6 sm:grid-cols-3">
@@ -125,12 +76,12 @@ export default function Home() {
           </div>
           <div className="relative rounded-[1.75rem] border border-white/15 bg-gradient-to-b from-white/5 via-white/[0.03] to-black/40 p-6 backdrop-blur">
             <div className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-white/60">
-              <span>Live preview</span>
-              <span>Secure</span>
+              {preview.labels.map((label) => (
+                <span key={label}>{label}</span>
+              ))}
             </div>
             <div className="mt-6 rounded-2xl border border-white/10 bg-black/60 p-6 text-sm leading-relaxed text-white/70">
-              “Hi! I’m Luna, your guide at Lunim Studio. Tell me about your
-              project and I’ll help you find the perfect next steps.”
+              &ldquo;{preview.quote}&rdquo;
             </div>
             <div className="mt-6 flex flex-col items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
               <Image
@@ -139,10 +90,7 @@ export default function Home() {
                 priority
                 className="w-32 md:w-40"
               />
-              <p className="text-sm text-white/70">
-                Voice-first, privacy-aware, and always ready to hand off to the
-                Lunim team.
-              </p>
+              <p className="text-sm text-white/70">{preview.supportingText}</p>
             </div>
           </div>
         </header>
@@ -150,19 +98,15 @@ export default function Home() {
         <section className="mx-auto flex w-full max-w-6xl flex-col gap-10 rounded-[2.5rem] border border-white/10 bg-white/[0.03] p-8 sm:p-12">
           <div className="max-w-3xl">
             <p className="text-sm uppercase tracking-[0.4em] text-white/60">
-              Why teams ask Luna
+              {whySection.eyebrow}
             </p>
             <h2 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
-              Every conversation ends with a confident plan
+              {whySection.heading}
             </h2>
-            <p className="mt-4 text-white/70">
-              Instead of waiting for a scoping call, Luna helps product and
-              marketing leads reach clarity faster. Switch between voice and
-              text at any point, save your plan, or keep it totally confidential.
-            </p>
+            <p className="mt-4 text-white/70">{whySection.body}</p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
-            {features.map((feature) => (
+            {whySection.features.map((feature) => (
               <div
                 key={feature.title}
                 className="rounded-3xl border border-white/10 bg-black/40 p-6"
@@ -184,27 +128,22 @@ export default function Home() {
         <section className="mx-auto grid w-full max-w-6xl gap-10 lg:grid-cols-[360px_minmax(0,_1fr)] lg:items-start">
           <div className="rounded-[2rem] border border-white/10 bg-gradient-to-b from-cyan-500/10 via-black/30 to-black/60 p-8">
             <p className="text-sm uppercase tracking-[0.5em] text-white/60">
-              Flow
+              {flowSection.eyebrow}
             </p>
-            <h2 className="mt-4 text-3xl font-semibold">
-              Start the conversation whenever inspiration hits.
-            </h2>
-            <p className="mt-4 text-white/70">
-              Luna keeps track of every message, surfaces clarifying questions,
-              and nudges you to a human teammate when a deeper dive makes sense.
-            </p>
+            <h2 className="mt-4 text-3xl font-semibold">{flowSection.heading}</h2>
+            <p className="mt-4 text-white/70">{flowSection.body}</p>
             <button
               type="button"
               onClick={openLuna}
               className="mt-8 inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-white via-cyan-200 to-white px-7 py-4 text-base font-semibold text-black shadow-[0_10px_30px_rgba(255,255,255,0.25)] transition hover:scale-105 focus:outline-none focus-visible:ring-4 focus-visible:ring-white/80"
             >
-              Ask Luna now
+              {flowSection.ctaLabel}
               <span aria-hidden="true">→</span>
             </button>
           </div>
           <div className="rounded-[2rem] border border-white/10 bg-white/[0.02] p-6 sm:p-10">
             <ol className="space-y-6">
-              {flow.map((step, index) => (
+              {flowSection.steps.map((step, index) => (
                 <li key={step.title} className="flex gap-5">
                   <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-black/60 text-lg font-semibold">
                     {index + 1}
@@ -223,27 +162,23 @@ export default function Home() {
 
         <section className="mx-auto flex w-full max-w-4xl flex-col items-center gap-6 rounded-[2.75rem] border border-white/10 bg-gradient-to-b from-white/[0.07] via-black/20 to-black/70 p-8 text-center sm:p-12">
           <p className="text-sm uppercase tracking-[0.4em] text-white/60">
-            Ready when you are
+            {closingSection.eyebrow}
           </p>
           <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-            Spin up your plan with a single tap
+            {closingSection.heading}
           </h2>
-          <p className="max-w-2xl text-white/70">
-            Whether you&apos;re refining an existing roadmap or exploring a
-            fresh build, Luna captures your thinking, recommends next actions,
-            and preps everything for a seamless handoff to Lunim.
-          </p>
+          <p className="max-w-2xl text-white/70">{closingSection.body}</p>
           <div className="flex flex-wrap justify-center gap-4">
             <button
               type="button"
               onClick={openLuna}
               className="inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-cyan-400 via-emerald-200 to-white px-9 py-4 text-lg font-semibold text-black shadow-[0_15px_40px_rgba(28,200,180,0.45)] transition hover:scale-105 hover:shadow-[0_20px_50px_rgba(28,200,180,0.6)] focus:outline-none focus-visible:ring-4 focus-visible:ring-cyan-100"
             >
-              Ask Luna
+              {closingSection.ctaLabel}
               <span aria-hidden="true">↗</span>
             </button>
             <span className="inline-flex items-center rounded-full border border-white/10 px-5 py-3 text-sm text-white/70">
-              No waitlist • instantly available
+              {closingSection.badge}
             </span>
           </div>
         </section>
