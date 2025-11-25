@@ -19,7 +19,6 @@ import { useSpeechSynthesis } from './hooks/useSpeechSynthesis';
 import { useSpeechRecognition } from './hooks/useSpeechRecognition';
 import { LunaPortrait } from './components/LunaPortrait';
 import { VoiceControls } from './components/VoiceControls';
-import { LunaCaption } from './components/LunaCaption';
 import { SpeechErrorBoundary } from './components/SpeechErrorBoundary';
 import { PrivacyMode, InteractionMode, LunaConversationDecision } from './types';
 import { lunaAnalytics } from './utils/analytics';
@@ -570,16 +569,16 @@ function LunaPortalContent({ isOpen, onClose }: LunaPortalProps) {
 
   // Read summary aloud
   const handleReadSummary = useCallback(() => {
-    if (state.session?.plan) {
-      const fullSummary = `${state.session.plan.summary} Here are your next steps: ${
-        state.session.plan.nextSteps.map((step, i) => 
-          `${i + 1}. ${step.title}: ${step.description}`
-        ).join(' ')
-      }`;
-      speak(fullSummary);
-      lunaAnalytics.trackSummaryRead();
-    }
-  }, [state.session?.plan, speak]);
+    const plan = state.session?.plan;
+    if (!plan) return;
+
+    const fullSummary = `${plan.summary} Here are your next steps: ${plan.nextSteps
+      .map((step, i) => `${i + 1}. ${step.title}: ${step.description}`)
+      .join(' ')}`;
+
+    speak(fullSummary);
+    lunaAnalytics.trackSummaryRead();
+  }, [state.session, speak]);
 
   // Download PDF
   const handleDownloadPDF = useCallback(async () => {
