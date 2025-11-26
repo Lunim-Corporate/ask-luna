@@ -775,6 +775,10 @@ ls -la src/assets/luna.png
 
 ---
 
+## To Change the password
+
+Update the hash in src/lib/auth.ts. Replace DASHBOARD_PASSWORD_HASH with a SHA‑256 hash of your new password. You can generate it locally with node -e "const crypto=require('crypto');console.log(crypto.createHash('sha256').update('YOUR_NEW_PASSWORD').digest('hex'))" and paste the resulting hex string.
+
 ## License
 
 © 2025 Lunim. All rights reserved.
