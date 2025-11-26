@@ -205,7 +205,7 @@ downloadPDF(blob);
 
 ### Session Start
 ```
-1. User clicks "Ask Luna" button in navbar
+1. User clicks "Consult Luna" button in navbar
    ↓
 2. Modal opens with Luna brand image
    ↓

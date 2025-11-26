@@ -76,12 +76,28 @@ export default async function ConversationDetailPage(props: {
                 messages.map((message, idx) => (
                   <li
                     key={`${conversation.id}-${idx}`}
-                    className="rounded-2xl border border-white/10 bg-white/[0.03] p-4"
+                    className={`rounded-2xl border p-4 ${
+                      message.role === "luna"
+                        ? "border-cyan-400/40 bg-cyan-400/10"
+                        : "border-white/10 bg-white/[0.03]"
+                    }`}
                   >
-                    <p className="text-xs uppercase tracking-[0.4em] text-white/60">
+                    <p
+                      className={`text-xs uppercase tracking-[0.4em] ${
+                        message.role === "luna"
+                          ? "text-cyan-200"
+                          : "text-white/60"
+                      }`}
+                    >
                       {message.role === "luna" ? "Luna" : "Visitor"}
                     </p>
-                    <p className="mt-2 text-sm text-white/80">
+                    <p
+                      className={`mt-2 text-sm ${
+                        message.role === "luna"
+                          ? "text-white/90"
+                          : "text-white/80"
+                      }`}
+                    >
                       {message.content}
                     </p>
                   </li>

@@ -34,7 +34,7 @@ export function LoginForm({ action }: LoginFormProps) {
         </p>
         <h1 className="text-2xl font-semibold text-white">Sign in to view logs</h1>
         <p className="text-sm text-white/60">
-          Use the credentials provided by Lunim to review Ask Luna demos.
+          Use the credentials provided by Lunim to review Consult Luna demos.
         </p>
       </div>
 
