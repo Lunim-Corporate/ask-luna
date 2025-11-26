@@ -1,7 +1,7 @@
 {
   "hero": {
     "highlights": ["1-week install", "Lead capture ready", "Privacy-first"],
-    "title": "See how Ask Luna converts curious visitors into qualified projects.",
+    "title": "See how Consult Luna converts curious visitors into qualified projects.",
     "description": "This interactive demo is exactly what Lunim deploys for clients who want an AI concierge on their site. Let prospects talk through scope, surface plans automatically, and hand off warm, structured briefs to your team.",
     "primaryCtaLabel": "Consult Luna",
     "statusBadge": "Demo environment • optimized for desktop"
@@ -42,7 +42,7 @@
     "eyebrow": "Pilot flow",
     "heading": "From hello to handoff in four simple beats.",
     "body": "Launch the widget on your marketing site, drive traffic to this experience, and let Luna gather everything your strategists normally ask in a kickoff.",
-    "ctaLabel": "Ask Luna now",
+    "ctaLabel": "Consult Luna now",
     "steps": [
       {
         "title": "Share where you are",

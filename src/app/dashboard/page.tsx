@@ -21,13 +21,13 @@ export default async function DashboardPage() {
     <div className="min-h-screen bg-black px-5 py-16 text-white sm:px-8 lg:px-16">
       <section className="mx-auto flex w-full max-w-6xl flex-col gap-4">
         <p className="text-sm uppercase tracking-[0.6em] text-white/60">
-          Ask Luna demo
+          Consult Luna demo
         </p>
         <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
           Conversation intelligence dashboard
         </h1>
         <p className="max-w-3xl text-base text-white/70 sm:text-lg">
-          Review conversations captured inside the Ask Luna widget over the last
+          Review conversations captured inside the Consult Luna widget over the last
           seven days. Select a session to dive into the transcript and plan
           details.
         </p>
@@ -46,7 +46,7 @@ export default async function DashboardPage() {
         {conversations.length === 0 ? (
           <div className="rounded-3xl border border-white/10 bg-white/5 p-8 text-center text-white/70">
             No conversations were recorded in the last seven days. Send a test
-            message through Ask Luna to populate this dashboard.
+            message through Consult Luna to populate this dashboard.
           </div>
         ) : (
           conversations.map((conversation) => (

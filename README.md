@@ -205,7 +205,7 @@ downloadPDF(blob);
 
 ### Session Start
 ```
-1. User clicks "Ask Luna" button in navbar
+1. User clicks "Consult Luna" button in navbar
    ↓
 2. Modal opens with Luna brand image
    ↓
@@ -774,6 +774,10 @@ ls -la src/assets/luna.png
 - Error handling and recovery
 
 ---
+
+## To Change the password
+
+Update the hash in src/lib/auth.ts. Replace DASHBOARD_PASSWORD_HASH with a SHA‑256 hash of your new password. You can generate it locally with node -e "const crypto=require('crypto');console.log(crypto.createHash('sha256').update('YOUR_NEW_PASSWORD').digest('hex'))" and paste the resulting hex string.
 
 ## License
 

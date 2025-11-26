@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ask Luna • Lunim",
-  description: "Ask Luna, the AI project strategist for agencies and studios.",
+  title: "Consult Luna • Lunim",
+  description: "Consult Luna, the AI project strategist for agencies and studios.",
 };
 
 export default function RootLayout({
